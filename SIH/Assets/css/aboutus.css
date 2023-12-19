@@ -1,0 +1,49 @@
+
+.about_section{
+    background-image: url(aboutus\ bg.png);
+}
+.abc{
+    background-color: #47b5ff;
+    position: absolute;
+    width: 100%;
+    top: 1900px;
+    height: 50px;
+}
+#box10{
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    background-color: #ceedfa;
+    top: 1950px;
+    left: 250px;
+
+}
+.bcde{
+    position: absolute;
+    left: 335px;
+    text-decoration: underline;
+}
+.cdef{
+    position: absolute;
+    top: 100px;
+    text-align: center;
+
+}
+#box12{
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    background-color: #ceedfa;
+    top: 2400px;
+    left: 250px;
+}
+.desk{
+    position: absolute;
+    left: 305px;
+    text-decoration: underline;
+}
+.eye{
+    position: relative;
+    text-align: center;
+    top: 200px;
+}

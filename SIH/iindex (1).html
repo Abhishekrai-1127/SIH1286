@@ -1,0 +1,576 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="featured.css">
+    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            /* height: 80%; */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            border-radius: 20px;
+        }
+
+        .b-pricing-block__plan--content-wrap {
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius: 8px;
+            height: 100%;
+            width: fit-content;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 40px;
+        }
+
+
+
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: rgb(33, 150, 219);
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #5cb85c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="row-1">
+                <div class="row-1-col-1">
+                    <a href="#">Language</a>
+                    <a href="#">Talk to Lawyer</a>
+                    <a href="#">Free legal Advice</a>
+                </div>
+                <div class="row-1-col-2">
+                    <i class="fa-solid fa-bell fa-shake"></i>
+                    <a href="#">Notifications</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="Logo">
+                <img src="logobg2.jpg" alt="Logo" style="height: 55px; width: 145px;padding-left: 10px ;">
+            </div>
+            <div class="menu-bar">
+                <a href="#" style="opacity: 1; text-decoration: underline;">Home</a>
+                <a href="#" class="services" role="button">Our services</a>
+                <div class="level-2 service-list">
+                    <ul style="list-style-type:none ; color: black;">
+                        <li>
+                            <a href="#">legal consultant</a><br><br>
+                            <a href="#">Mediator service</a><br><br>
+                            <a href="#">Arbitator</a><br><br>
+                            <a href="#">Notary service</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="providers">Providers</a>
+                <div class="level-2 providers-list">
+                    <ul style="list-style-type: none; color: black;">
+                        <li>
+                            <a href="#">Advocate</a><br><br>
+                            <a href="#">Arbitators</a><br><br>
+                            <a href="#">Mediators</a><br><br>
+                            <a href="#">Noters</a>
+                            <br<br>
+
+                        </li>
+                    </ul>
+                </div>
+                <a href="#">IPC Sections</a>
+                <a href="#">FAQ</a>
+                <a href="#">About</a>
+
+            </div>
+            <div class="login">
+                <a href="#">Login/Register</a>
+                <img class="profile-icon" src="account_thin.svg" alt="">
+            </div>
+            <div><button class="button-85" role="button">Pricing</button>
+            </div>
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Pricing Tiers</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Some text in the Modal Body</p>
+                        <p>Some other text...</p>
+                        <div class="b-pricing-block__plan--content-wrap">
+                            <h2 class="c-title ">
+                                Trial
+                            </h2>
+                            <!-- <div class="b-pricing-block__plan--heading">
+                                <div class="b-pricing-block__plan--title-dropdown">
+                                    <h2 class="c-title b-pricing-block__plan--title">
+                                        Trial
+                                    </h2>
+                                </div>
+                            </div> -->
+
+                            <div class="b-pricing-block__plan--price-wrap">
+                                <div class="b-pricing-block__plan--price" style="height: 44px">
+                                    <div class="b-pricing-block__plan--price-single b-pricing-block__plan--price-0 active"
+                                        data-price="0">
+                                        Rs0<span>/month</span>
+                                    </div>
+                                </div>
+                                <div class="b-pricing-block__plan--price-sub" style="height: 32px">
+                                    <div
+                                        class="b-pricing-block__plan--price-sub-single b-pricing-block__plan--price-sub-0 active">
+
+                                    </div>
+                                </div>
+                                
+                                <!-- <a class="b-pricing-block__plan--price-cta b-pricing-block__plan--price-cta-0 active"
+                                    href="http://studio.d-id.com" target="_blank">SELECT PLAN</a> -->
+                            </div>
+                            <div class="b-pricing-block__plan--bulletpoints-wrap">
+                                <div class="b-pricing-block__plan--bulletpoint b-pricing-block__plan--bulletpoint--0"
+                                    style="min-height: 20px;">
+                                    Chat Bot Option
+                                </div>
+                                <div class="b-pricing-block__plan--bulletpoint b-pricing-block__plan--bulletpoint--1"
+                                    style="min-height: 20px;">
+                                    Can only watch the profile of lawyers
+                                </div>
+                                <div class="b-pricing-block__plan--bulletpoint b-pricing-block__plan--bulletpoint--2"
+                                    style="min-height: 40px;">
+                                    Limited Support
+                                </div>
+                                <div class="b-pricing-block__plan--bulletpoint b-pricing-block__plan--bulletpoint--3"
+                                    style="min-height: 40px;">
+                                    Can only consult with lawyer
+                                </div>
+                                <div class="b-pricing-block__plan--bulletpoint b-pricing-block__plan--bulletpoint--4"
+                                    style="min-height: 40px;">
+                                    
+                                </div>
+                                
+                            </div>
+                            <a href="http://studio.d-id.com" class="b-pricing-block__plan--price-cta mobile"
+                                target="_blank">SELECT PLAN</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+
+                var btn = document.querySelector(".button-85");
+                var modal = document.getElementById("myModal");
+                var span = document.getElementsByClassName("close")[0];
+
+                btn.addEventListener("click", function () {
+                    modal.style.display = "block";
+                });
+
+                span.addEventListener("click", function () {
+                    modal.style.display = "none";
+                });
+
+                window.addEventListener("click", function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                });
+
+            </script>
+        </div>
+        <div class="hero-section">
+            <div class="hero-background">
+                <div class="talktolaw">
+                    <a style="color: white;" href="#">Talk to Lawyer</a>
+                </div>
+                <div class="talktolaw2">
+                    <a style="color: white;" href="#">Free Legal Advice</a>
+                </div>
+            </div>
+        </div>
+        <div class="search-section">
+            <div class="search-heading">
+                <p style="color: azure; ">
+                    Search for top Lawyer
+                </p>
+            </div>
+
+            <div class="search-option">
+                <label for="search"></label>
+                <select name="search" id="search-location">
+                    <option value="provider" selected>Location served </option>
+                    <option value="location">Uttar pradesh</option>
+                    <option value="location">Bihar</option>
+                    <option value="location">delhi</option>
+                    <option value="location">rajasthan</option>
+                    <option value="location">england</option>
+
+                </select>
+                <select name="search" id="search_provider">
+                    <option value="provider" selected>Practice Area </option>
+                    <option value="provider">Advocate</option>
+                    <option value="provider">Mediator</option>
+                    <option value="provider">Arbitator</option>
+                    <option value="provider">Notary</option>
+                </select>
+                <button type="submit" class="btn"> search</button>
+            </div>
+        </div>
+        <div class="Our-services">
+            <h2 class="heading">Our Services</h2>
+            <div class="card-container">
+                <div class="card">
+                    <a href="#"></a>
+                    <img src="icon-injuries.svg" alt="">
+                    <p>Accident and injuries</p>
+                </div>
+
+                <div class="card">
+                    <a href="#"></a>
+                    <img src="icon-criminal.svg">
+                    <p>Accident and injuries</p>
+                </div>
+
+                <div class="card">
+                    <a href="#"></a>
+                    <img src="icon-dui.svg" alt="">
+                    <p>Accident and injuries</p>
+                </div>
+
+                <div class="card">
+                    <a href="#"></a>
+                    <img src="icon-employment.svg" alt="">
+                    <p>Accident and injuries</p>
+                </div>
+
+                <div class="card">
+                    <a href="#"></a>
+                    <img src="icon-statelaws.svg" alt="">
+                    <p>Accident and injuries</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured">
+            <h2 class="heading">Featured Lawyer</h2>
+            <div class="container">
+                <div class="box">
+                    <div class="box-img">
+                        <img class="img" src="profile card/8a2b7469-6b4e-4ffe-af66-95b289bab0fc.jpeg" alt="photo">
+                    </div>
+                    <div class="card-content">
+                        <h3>JHON ADAM</h3>
+                        <p>Associate lawyer</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-img">
+                        <img class="img" src="profile card/8a2b7469-6b4e-4ffe-af66-95b289bab0fc.jpeg" alt="photo">
+                    </div>
+                    <div class="card-content">
+                        <h3>JHON ADAM</h3>
+                        <p>Associate lawyer</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-img">
+                        <img class="img" src="profile card/8a2b7469-6b4e-4ffe-af66-95b289bab0fc.jpeg" alt="photo">
+
+
+                    </div>
+                    <div class="card-content">
+                        <h3>JHON ADAM</h3>
+                        <p>Associate lawyer</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="about-us-section">
+            <div class="background-image"></div>
+            <div class="content">
+                <h2 class="heading">Why Bharat Justice?</h2>
+                <p class="para">
+                    <!-- At our website, we've revolutionized the way you connect with lawyers. Our platform, government-approved for your peace of mind, offers an array of features that make your legal journey effortless. Whether you're facing family issues, dealing with tricky documents, or have any other legal concerns, our website ensures that you can swiftly hire the best lawyer. We take pride in our dedication to simplifying the legal process, ensuring you can trust us as your ultimate resource for legal solutions. Choose us because we're committed to making your legal experience fast, efficient, and reliable. -->
+                    We've redefined the way you connect with lawyers. Our government-approved platform simplifies your
+                    legal journey. Whether it's family matters, complex documents, or any legal concern, we enable you
+                    to hire top lawyers swiftly. Trust us as your ultimate legal resource for fast, efficient, and
+                    reliable solutions.
+                </p>
+            </div>
+
+            <div class="row-11-col-11">
+                <ul>
+                    <li>Multilingual</li>
+                    <li>User friendly Interface</li>
+                    <li>Innovative Insentives</li>
+
+                </ul>
+            </div>
+            <div class="row-11-col-22">
+                <ul>
+                    <li>Entensive Legal Expertise</li>
+                    <li>Transparent and Secure</li>
+                    <li>Community and Support</li>
+                </ul>
+
+            </div>
+        </div>
+        <section class="cont" style="background-color: aqua;">
+            <div class="testcontaner">
+
+                <div class="item">
+                    <h2>Client Testimonials</h2>
+                    <p style="font-size:16px;">"Within minutes of posting my legal query on the online portal of
+                        Bharat Justice, I got clear answers to my legal problem from top lawyers in the country. The
+                        replies
+                        were quick, prompt and gave me a clear understanding of the law that surrounds my concerns. It
+                        is nothing less than magic!"</p>
+                    <p class="author"><a><b>Anuradha S</b></a></p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </section>
+/*////////////////////Footer Section////////////////////////////*/
+    <footer>
+            <div class="footer-line"></div>
+            <div class="footer-wrapper">
+                <section class="footer-top">
+                    <div class="footer-headline">
+                        <h2>Sign up to our newsletter</h2>
+                        <p>
+                            Stay up to date with our news and articles
+                        </p>
+                    </div>
+                    <div class="footer-subscribe">
+                        <input type="email" spellcheck="false" placeholder="Your Email">
+                        <button>
+                            Sign Up
+                        </button>
+                    </div>
+                </section>
+                <div class="footer-columns">
+                    <section class="footer-logo">
+                        <img src="Logo.jpg" alt="Logo   ">
+                        <h2 class="hide">BharatLaw</h2>
+                    </section>
+                    <section>
+                        <h3>Solutions</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Talk to layer">Talk to layer</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Property">Property</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Documentation">Documentation</a>
+                            </li>
+                            <li>
+                                <a href="#" title="For Lawyers">For lawyers</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Status">Status</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Resources</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Support">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Sitemap">Sitemap</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Newsletter">Newsletter</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Help Centre">Help Centre</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Investor">Investor</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Company</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="About Us">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Blog">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Careers">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Press">Press</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Contact">Contact</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Legal</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Terms and services">
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Privacy Policy">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Cookies">
+                                    Cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Licenses">
+                                    Licenses
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Cookies">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="footer-bottom">
+                    <small>© My Company Ltd. <span id="year"></span>, All rights reserved</small>
+                    <span class='social-links'>
+                        <a href="#" title="Instagram">
+                            <img src="profile card/instagram.svg" alt='Instagram'>                       
+                        </a>
+                        <a href="#" title="Linkedin">
+                            <img src="profile card/linkedin.svg" alt='Linkedin'>
+                        </a>
+                        <a href="#" title="Twitter">
+                            <img src="profile card/twitter.svg" alt='Twitter'>
+                        </a>
+                        <a href="#" title="Youtube">
+                            <img src="profile card/youtube.svg" alt='YouTube'>
+                        </a>
+                        <!-- <a href="#" title="GitHub">
+                            <img src="assets/github.svg" alt='GitHub'>
+                        </a> -->
+                    </span>
+                </div>
+            </div>
+        </footer>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

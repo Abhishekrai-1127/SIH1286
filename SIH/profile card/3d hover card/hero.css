@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  p {
+    color: black;
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h2 {
+    color: black;
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+  
+  .card {
+    background: url("images.jpeg") no-repeat;
+    background-size: cover;
+    max-width: 300px;
+    margin: auto;
+    height: auto;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    color: #fff;
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+  
+  .card::before {
+    content: "";
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  /* Slight parallax effect on hover */
+  .card:hover .content {
+    transform: translateZ(12px);
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Demo only */
+  .container {
+    margin-top: 100px;
+  }
+  
+  .photo-cred {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  
